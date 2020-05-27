@@ -2,12 +2,21 @@
 
 This is a personal project for learning Flask and Flask Restful.
 
+## Requirements
+- Flask 1.1.2
+- Flask-JWT 0.3.2
+- Flask-RESTful 0.3.8
+- Flask-SQLAlchemy 2.4.3
+- PyJWT 1.4.2
+- SQLAlchemy 1.3.17
+- Werkzeug 1.0.1
+
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Flask-RESTful. This will install both the Flask and Flask-RESTful and other required packaegs
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all the required packages.
 
 ```bash
-pip install Flask-RESTful
+pip install -r requirements.txt
 ```
 
 ## Contributing
