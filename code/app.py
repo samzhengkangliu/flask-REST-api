@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Api
-from flask_jwt import JWT
+from flask_jwt import JWT, timedelta
 
 from security import authenticate, identity
 from user import UserRegister
@@ -10,6 +10,9 @@ app = Flask(__name__)
 app.secret_key = 'sam'
 api = Api(app)
 
+app.config['JWT_AUTH_URL_RULE'] = '/login'
+# config JWT to expire within half an hour
+app.config['JWT_EXPIRATION_DELTA'] = timedelta(seconds=1800)
 jwt = JWT(app, authenticate, identity)
 
 api.add_resource(Item, '/items/<string:name>')
